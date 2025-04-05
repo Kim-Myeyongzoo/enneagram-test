@@ -43,16 +43,6 @@ function selectAnswer(score) {
 }
 
 function showResult() {
-  document.querySelector('.container').innerHTML = "";
   const topType = Object.entries(scores).reduce((a, b) => a[1] > b[1] ? a : b)[0];
-  const resultBox = document.createElement("div");
-  resultBox.className = "result";
-  resultBox.innerHTML = `
-    <h2>당신의 성향은?</h2>
-    <p>\${descriptions[topType]}</p>
-    <p style="margin-top:1rem;">(결과 페이지는 추후 동물 우표 편지로 연결됩니다)</p>
-  `;
-  document.body.querySelector('.container').appendChild(resultBox);
+  window.location.href = `결과페이지/result-type-${topType}.html`;
 }
-
-document.addEventListener("DOMContentLoaded", showQuestion);
