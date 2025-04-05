@@ -29,7 +29,7 @@ const scores = { 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0 };
 function showQuestion() {
   if (index < questions.length) {
     document.querySelector('.question-text').textContent = questions[index].text;
-    document.querySelector('.progress').textContent = \`\${index + 1} / \${questions.length}\`;
+    document.querySelector('.progress').textContent = `${index + 1 } / ${questions.length}`;
   } else {
     showResult();
   }
