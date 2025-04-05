@@ -29,7 +29,7 @@ const scores = { 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0 };
 function showQuestion() {
   if (index < questions.length) {
     document.querySelector('.question-text').textContent = questions[index].text;
-    document.querySelector('.progress').textContent = `${index + 1 } / ${questions.length}`;
+    document.querySelector('.progress').textContent = `${index + 1} / ${questions.length}`;
   } else {
     showResult();
   }
@@ -47,11 +47,11 @@ function showResult() {
   const topType = Object.entries(scores).reduce((a, b) => a[1] > b[1] ? a : b)[0];
   const resultBox = document.createElement("div");
   resultBox.className = "result";
-  resultBox.innerHTML = \`
+  resultBox.innerHTML = `
     <h2>당신의 성향은?</h2>
     <p>\${descriptions[topType]}</p>
     <p style="margin-top:1rem;">(결과 페이지는 추후 동물 우표 편지로 연결됩니다)</p>
-  \`;
+  `;
   document.body.querySelector('.container').appendChild(resultBox);
 }
 
