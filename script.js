@@ -44,5 +44,5 @@ function selectAnswer(score) {
 
 function showResult() {
   const topType = Object.entries(scores).reduce((a, b) => a[1] > b[1] ? a : b)[0];
-  window.location.href = `결과페이지/result-type-${topType}.html`;
+  window.location.href = `result/result-type-${topType}.html`;
 }
